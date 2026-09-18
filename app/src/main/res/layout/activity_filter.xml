@@ -1,0 +1,24 @@
+<LinearLayout android:id="@+id/filterRoot" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="?attr/colorSurface">
+ <com.google.android.material.appbar.MaterialToolbar android:id="@+id/filterToolbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:title="クイヤフィルター" android:navigationIcon="@android:drawable/ic_media_previous" />
+ <ScrollView android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:fillViewport="true">
+  <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+   <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="苦手な言葉" android:textAppearance="?attr/textAppearanceTitleLarge" android:textColor="?attr/colorOnSurface" />
+   <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1行に1件。ページ内の文字がクイヤ🦫に置き換わります。" android:textColor="?attr/colorOnSurfaceVariant" android:layout_marginTop="4dp" />
+   <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:hint="例：つらい\nかなしい\n苦手な言葉">
+    <com.google.android.material.textfield.TextInputEditText android:id="@+id/wordsInput" android:layout_width="match_parent" android:layout_height="220dp" android:gravity="top" android:inputType="textMultiLine" />
+   </com.google.android.material.textfield.TextInputLayout>
+   <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="苦手なURL／URL文字列" android:textAppearance="?attr/textAppearanceTitleLarge" android:textColor="?attr/colorOnSurface" android:layout_marginTop="24dp" />
+   <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="一致したURLは、あんしんクイヤー画面でブロックします。" android:textColor="?attr/colorOnSurfaceVariant" android:layout_marginTop="4dp" />
+   <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:hint="例：https://example.com\nshortsp.com">
+    <com.google.android.material.textfield.TextInputEditText android:id="@+id/urlsInput" android:layout_width="match_parent" android:layout_height="220dp" android:gravity="top" android:inputType="textMultiLine|textUri" />
+   </com.google.android.material.textfield.TextInputLayout>
+   <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="画像URLの置換" android:textAppearance="?attr/textAppearanceTitleLarge" android:textColor="?attr/colorOnSurface" android:layout_marginTop="24dp" />
+   <com.google.android.material.switchmaterial.SwitchMaterial android:id="@+id/imageWordSwitch" style="@style/Widget.Material3.CompoundButton.MaterialSwitch" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="画像URLに苦手な言葉が含まれる場合も🦫にする" android:checked="true" />
+   <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1行に1件。画像URLが一致した画像を🦫に置き換えます。画像URLに苦手な言葉が含まれる場合も対象です。" android:textColor="?attr/colorOnSurfaceVariant" android:layout_marginTop="4dp" />
+   <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:hint="例：https://example.com/bad-image.jpg">
+    <com.google.android.material.textfield.TextInputEditText android:id="@+id/imageUrlsInput" android:layout_width="match_parent" android:layout_height="180dp" android:gravity="top" android:inputType="textMultiLine|textUri" />
+   </com.google.android.material.textfield.TextInputLayout>
+  </LinearLayout>
+ </ScrollView>
+ <com.google.android.material.button.MaterialButton android:id="@+id/saveFilterButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_margin="16dp" android:text="保存する" />
+</LinearLayout>

@@ -1,0 +1,23 @@
+<LinearLayout android:id="@+id/mainRoot" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="?attr/colorSurface">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:paddingHorizontal="12dp" android:gravity="center_vertical">
+        <com.google.android.material.textfield.TextInputLayout android:id="@+id/urlLayout" style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:hint="URLまたは検索">
+            <com.google.android.material.textfield.TextInputEditText android:id="@+id/urlInput" android:layout_width="match_parent" android:layout_height="wrap_content" android:singleLine="true" android:imeOptions="actionGo" android:inputType="textUri" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.button.MaterialButton android:id="@+id/goButton" style="@style/Widget.Material3.Button.IconButton" android:layout_width="52dp" android:layout_height="52dp" android:contentDescription="移動" android:text="→" android:textSize="24sp" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/menuButton" style="@style/Widget.Material3.Button.IconButton" android:layout_width="52dp" android:layout_height="52dp" android:contentDescription="メニュー" android:text="⋮" android:textSize="24sp" />
+    </LinearLayout>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <WebView android:id="@+id/webView" android:layout_width="match_parent" android:layout_height="match_parent" />
+        <LinearLayout android:id="@+id/welcome" android:layout_width="match_parent" android:layout_height="match_parent" android:gravity="center" android:orientation="vertical" android:background="?attr/colorSurface">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="🦫" android:textSize="96sp" android:contentDescription="クイヤ" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="クイヤ🦫フィルタリング" android:textAppearance="?attr/textAppearanceHeadlineSmall" android:textColor="?attr/colorOnSurface" android:layout_marginTop="16dp" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="共有されたページを、やさしくフィルタリング" android:textColor="?attr/colorOnSurfaceVariant" android:layout_marginTop="8dp" />
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="68dp" android:gravity="center" android:weightSum="4" android:background="?attr/colorSurfaceContainer">
+        <com.google.android.material.button.MaterialButton android:id="@+id/backButton" style="@style/Widget.Material3.Button.TextButton" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="←" android:textSize="24sp" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/forwardButton" style="@style/Widget.Material3.Button.TextButton" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="→" android:textSize="24sp" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/newButton" style="@style/Widget.Material3.Button.TextButton" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="🦫" android:textSize="22sp" />
+        <com.google.android.material.button.MaterialButton android:id="@+id/shareButton" style="@style/Widget.Material3.Button.TextButton" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="↗" android:textSize="24sp" />
+    </LinearLayout>
+</LinearLayout>

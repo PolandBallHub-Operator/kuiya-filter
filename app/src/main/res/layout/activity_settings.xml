@@ -1,0 +1,15 @@
+<LinearLayout android:id="@+id/settingsRoot" xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical" android:background="?attr/colorSurface">
+ <com.google.android.material.appbar.MaterialToolbar android:id="@+id/settingsToolbar" android:layout_width="match_parent" android:layout_height="wrap_content" android:title="設定" android:navigationIcon="@android:drawable/ic_media_previous" />
+ <ScrollView android:layout_width="match_parent" android:layout_height="match_parent"><LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+  <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="カラーテーマ" android:textAppearance="?attr/textAppearanceTitleLarge" android:textColor="?attr/colorOnSurface" />
+  <RadioGroup android:id="@+id/themeGroup" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp">
+   <RadioButton android:id="@+id/kuiyaTheme" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="クイヤYou" android:textSize="16sp" />
+   <RadioButton android:id="@+id/systemTheme" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="システムMonet（壁紙の色）" android:textSize="16sp" />
+  </RadioGroup>
+  <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp" android:text="クイヤYouはクイヤの青緑を基調にした配色、システムMonetはAndroidの壁紙由来のDynamic Colorを使用します。" android:textColor="?attr/colorOnSurfaceVariant" />
+  <com.google.android.material.button.MaterialButton android:id="@+id/openFilterButton" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="28dp" android:text="クイヤフィルターを編集" />
+  <ImageView android:layout_width="72dp" android:layout_height="72dp" android:layout_marginTop="32dp" android:src="@drawable/distributor_icon" android:contentDescription="配布者アイコン" />
+  <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="配布者" android:textAppearance="?attr/textAppearanceTitleMedium" android:textColor="?attr/colorOnSurface" android:layout_marginTop="8dp" />
+  <TextView android:id="@+id/distributorLink" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="https://github.com/PolandBallHub-Operator" android:textColor="?attr/colorPrimary" android:autoLink="web" android:layout_marginTop="4dp" />
+ </LinearLayout></ScrollView>
+</LinearLayout>
